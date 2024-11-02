@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from './logo.jpg'
+import logo from './logo.png'
 
 const data = {
   "Contact Information": [
@@ -144,7 +144,7 @@ const DisasterBoard: React.FC = () => {
             <div className="flex flex-col items-center text-center gap-2">
             <p className="mr-4 text-sm">Select a Category</p>
             <details className="relative inline-block text-left w-full md:w-auto">
-              <summary className="inline-flex justify-center w-full md:w-auto rounded-md border-2 border-[#28306f] px-4 py-2 bg-white text-[#28306f] text-sm font-medium hover:border-[#1c1f4a] focus:outline-none cursor-pointer">
+              <summary className="inline-flex justify-center w-full md:w-auto rounded-md border-2 border-[#28306f] px-4 py-2 bg-white text-[#28306f] text-sm font-medium hover:border-[#1c1f4a] focus:outline-none cursor-pointer ">
                 {selectedCategory}
                 <svg
                   className="-mr-1 ml-2 h-5 w-5"
@@ -198,10 +198,10 @@ const DisasterBoard: React.FC = () => {
             {data[selectedCategory as keyof typeof data]?.map((item) => (
                 <details
                 key={item.question}
-                className="p-4 border-2 border-[#08008f] rounded-xl hover:bg-gray-50 transition-all transform cursor-pointer mb-2"
+                className="p-4 border-2 border-[#08008f] rounded-xl transition-all transform cursor-pointer mb-2"
                 >
                 <summary className="text-l font-semibold">{item.question}</summary>
-                <p className="text-gray-700 mt-2 ml-4">{item.answer}</p>
+                <p className="text-gray-700 mt-2 ml-4 dark:text-gray-200">{item.answer}</p>
               </details>
             ))}
           </div>
@@ -211,8 +211,8 @@ const DisasterBoard: React.FC = () => {
       {/* Footer */}
       <footer className="w-full bg-[#08008f] flex flex-col items-center justify-center text-white">
       <div className="w-full bg-[#08008f] flex flex-col items-center justify-center text-white">
-        <p className="text-sm">Powered by Broseph Foundation</p>
-        <div className="flex space-x-4 mt-2">
+        <p className="text-sm p-3">Made with ❤️ by Volunteers at Broseph Foundation</p>
+        {/* <div className="flex space-x-4 mt-2">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
         <img src="/icons/facebook.svg" alt="Facebook" className="h-6 w-6" />
           </a>
@@ -225,7 +225,7 @@ const DisasterBoard: React.FC = () => {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
         <img src="/icons/linkedin.svg" alt="LinkedIn" className="h-6 w-6" />
           </a>
-        </div>
+        </div> */}
       </div>
       </footer>
     </>
