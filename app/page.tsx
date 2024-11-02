@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from './logo.jpg';
+import logo from './logo.jpg'
 
 const data = {
   "Contact Information": [
@@ -100,7 +100,11 @@ const data = {
     "question": "Can I do my work / my office work while I'm there?",
     "answer": "Yes, we encourage volunteers to do their own work or their office work from the HQ itself, as long as they are able to commit a few hours of quality time to volunteering in between."
     }
-  ]
+  ],
+  'All': [{
+    "question": "Can I do my work / my office work while I'm there? ",
+    "answer": "Yes, we encourage volunteers to do their own work or their office work from the HQ itself, as long as they are able to commit a few hours of quality time to volunteering in between."
+    }]
 };
 data.All = Object.values(data).flat();
 
@@ -119,7 +123,7 @@ const DisasterBoard: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <div className="h-[8vh] w-full bg-[#08008f] flex items-center p-1 relative">
-        <img type='image/jpg' src={logo.src} alt="Broseph Foundation Logo" className="h-20 mr-2 absolute left-10 top-[10px]" />        {/* <h2 className="text-xl text-white font-bold">Broseph Foundation</h2> */}
+        <img src={logo.src} alt="Broseph Foundation Logo" className="h-20 mr-2 absolute left-10 top-[10px]" />        {/* <h2 className="text-xl text-white font-bold">Broseph Foundation</h2> */}
         <div className="flex justify-center items-center w-full">
           <select className="text-black p-2 rounded-md"
           style={{backgroundColor: "#08008f", color: "white"}}>
